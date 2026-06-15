@@ -672,19 +672,78 @@
   </div>
 </section>
 
+<!-- ESTILOS PARA LA ANIMACIÓN -->
+<style>
+  .clientes {
+    overflow: hidden; /* Esconde lo que sale de la pantalla */
+    padding: 40px 0;
+    background: #fff;
+  }
+
+  .clientes-logos {
+    display: flex;
+    width: calc(250px * 14); /* Ajusta según el número de logos */
+    animation: scroll 30s linear infinite;
+  }
+
+  .cliente-logo {
+    width: 250px; /* Espacio para cada logo */
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cliente-logo img {
+    height: 50px; /* Altura uniforme para todos */
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+  }
+
+  /* Efecto opcional: Que recuperen color al pasar el mouse */
+  .cliente-logo img:hover {
+    filter: grayscale(0%);
+  }
+
+  /* La magia del movimiento */
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7)); } /* Se mueve la mitad del total */
+  }
+</style>
+
 <!-- CLIENTES -->
 <section class="clientes" id="clientes">
-  <h2 class="clientes-titulo">Clientes</h2>
+  <h2 class="clientes-titulo" style="text-align: center;">Clientes</h2>
+  
   <div class="clientes-logos">
-    <div class="cliente-logo"><span>Almagro</span></div>
-    <div class="cliente-logo"><span>Socovesa</span></div>
-    <div class="cliente-logo"><span>Proparte</span></div>
-    <div class="cliente-logo"><span>connectRED</span></div>
-    <div class="cliente-logo"><span>Acossov</span></div>
-    <div class="cliente-logo"><span>dl diello</span></div>
-    <div class="cliente-logo"><span>NUO</span></div>
+    <!-- Bloque Original -->
+    <div class="cliente-logo"><img src="https://patio.cl/images/common/full-logo-gpatio.svg" alt="Grupo Patio"></div>
+    <div class="cliente-logo"><img src="https://res.cloudinary.com/postedin-website/image/upload/f_auto/q_auto/01J5ZSGABK2HWXTTKW770S0MMZ" alt="Socovesa"></div>
+    <div class="cliente-logo"><img src="URL_PROPARTE" alt="Proparte"></div>
+    <div class="cliente-logo"><img src="URL_CONNECTRED" alt="connectRED"></div>
+    <div class="cliente-logo"><img src="URL_ACOSSOV" alt="Acossov"></div>
+    <div class="cliente-logo"><img src="URL_DIELLO" alt="dl diello"></div>
+    <div class="cliente-logo"><img src="URL_NUO" alt="NUO"></div>
+
+    <!-- Bloque Duplicado (Necesario para el efecto infinito sin saltos) -->
+    <div class="cliente-logo"><img src="https://patio.cl/images/common/full-logo-gpatio.svg" alt="Grupo Patio"></div>
+    <div class="cliente-logo"><img src="URL_SOCOVESA" alt="Socovesa"></div>
+    <div class="cliente-logo"><img src="URL_PROPARTE" alt="Proparte"></div>
+    <div class="cliente-logo"><img src="URL_CONNECTRED" alt="connectRED"></div>
+    <div class="cliente-logo"><img src="URL_ACOSSOV" alt="Acossov"></div>
+    <div class="cliente-logo"><img src="URL_DIELLO" alt="dl diello"></div>
+    <div class="cliente-logo"><img src="URL_NUO" alt="NUO"></div>
   </div>
 </section>
+
+
+
+
+
+
+
+
 
 <!-- FOOTER -->
 <footer id="contacto">
